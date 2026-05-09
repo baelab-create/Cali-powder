@@ -2172,7 +2172,8 @@ body {
         </div>
       </div>
     </div>
-  
+  </div>
+
   <!-- 11 두피 - 임수진 -->
   <div class="review-item" onclick="toggleReview(this)">
     <div class="review-header">
@@ -2258,6 +2259,33 @@ body {
     </div>
   </div>
 
+  <!-- 14 솔직한 회의론자 후기 -->
+  <div class="review-item" onclick="toggleReview(this)">
+    <div class="review-header">
+      <div class="review-header-left">
+        <div class="review-avatar" style="background:#EFF4FB;color:#3A6090;">박</div>
+        <div class="review-meta">
+          <div class="review-name">박수정 원장 <span style="font-size:10px;color:var(--text-muted);font-weight:300;">| 두피/얼굴 전문</span></div>
+        </div>
+      </div>
+      <div class="review-arrow">▾</div>
+    </div>
+    <div class="review-body">
+      <div class="review-content">
+        <div class="review-quote">처음에는 기존 스킨부스터에 동결건조 칼슘을 섞는 게 무슨 차이가 있을지 사실 좀 의아해 했습니다. 고객에게 보여지는 퍼포먼스나 업셀링에는 도움이 되겠지만, <strong>관리 결과에 차이가 있을까?</strong> 라는 생각을 했었는데,
+
+이게 웬걸? <strong>차이가 확연히 나는 걸 느끼고 깜짝 놀랐어요.</strong>
+
+나중에 교수님 찾아뵐 때 사진도 준비할께요. 칼리 파우더를 다양한 조합으로 활용할 수 있을 것 같아 너무 신나요 😊</div>
+        <div class="review-tag-row">
+          <span class="review-tag">반신반의 → 결과 확인</span>
+          <span class="review-tag">퍼포먼스 이상의 실결과</span>
+          <span class="review-tag">다양한 조합 활용</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 </div>
@@ -2275,9 +2303,24 @@ body {
 </div>
 
 <script>
-function toggleAcc(el){ el.classList.toggle('open'); }
-function toggleFaq(el){ el.classList.toggle('open'); }
-function toggleReview(el){ el.classList.toggle('open'); }
+function toggleAcc(el){
+  const parent = el.closest('.section');
+  const isOpen = el.classList.contains('open');
+  if(parent){
+    parent.querySelectorAll('.accordion.open').forEach(a=>{ if(a!==el) a.classList.remove('open'); });
+  }
+  el.classList.toggle('open', !isOpen);
+}
+function toggleFaq(el){
+  const isOpen = el.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(f=>{ if(f!==el) f.classList.remove('open'); });
+  el.classList.toggle('open', !isOpen);
+}
+function toggleReview(el){
+  const isOpen = el.classList.contains('open');
+  document.querySelectorAll('.review-item.open').forEach(r=>{ if(r!==el) r.classList.remove('open'); });
+  el.classList.toggle('open', !isOpen);
+}
 window.addEventListener('DOMContentLoaded',()=>{
   setTimeout(()=>{
     document.querySelectorAll('.gradient-bar').forEach(b=>{
