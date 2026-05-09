@@ -42,7 +42,7 @@
   --shadow-md:   0 4px 20px rgba(26,29,35,0.09);
 }
 
-* { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+* { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; touch-action:manipulation; }
 html { scroll-behavior:smooth; }
 
 body {
@@ -197,7 +197,7 @@ body {
 .acc-header {
   display:flex; align-items:center;
   justify-content:space-between;
-  padding:14px 15px; cursor:pointer;
+  padding:14px 15px; cursor:pointer; -webkit-user-select:none; user-select:none;
   user-select:none; transition:background 0.2s; gap:10px;
 }
 .acc-header:active { background:var(--surface-2); }
@@ -216,8 +216,8 @@ body {
 .acc-desc  { font-size:11px; color:var(--text-muted); margin-top:2px; }
 .acc-arrow { color:var(--silver); font-size:18px; transition:transform 0.3s ease; flex-shrink:0; }
 .accordion.open .acc-arrow { transform:rotate(180deg); }
-.acc-body { max-height:0; overflow:hidden; transition:max-height 0.4s ease; }
-.accordion.open .acc-body { max-height:3000px; }
+.acc-body { height:0; overflow:hidden; transition:height 0.35s ease; }
+/* acc-body height controlled by JS */
 .acc-content { padding:0 15px 16px; border-top:1px solid var(--border-soft); }
 
 /* ── PROSE & BOXES ── */
@@ -409,8 +409,8 @@ body {
 .faq-q-text::before { content:'Q. '; color:var(--accent); font-family:'Cormorant Garamond', serif; font-size:16px; }
 .faq-toggle { color:var(--silver); font-size:18px; transition:transform 0.3s; flex-shrink:0; margin-top:1px; }
 .faq-item.open .faq-toggle { transform:rotate(45deg); }
-.faq-a { max-height:0; overflow:hidden; transition:max-height 0.35s ease; }
-.faq-item.open .faq-a { max-height:800px; }
+.faq-a { height:0; overflow:hidden; transition:height 0.35s ease; }
+/* faq-a height controlled by JS */
 .faq-a-content { padding:0 14px 14px; border-top:1px solid var(--border-soft); font-size:13px; color:var(--text-mid); line-height:1.8; }
 .faq-a-content::before { content:'A. '; color:var(--accent-mid); font-family:'Cormorant Garamond', serif; font-size:16px; font-weight:600; }
 
@@ -757,8 +757,8 @@ body {
   transition: transform 0.3s ease; flex-shrink: 0;
 }
 .review-item.open .review-arrow { transform: rotate(180deg); }
-.review-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
-.review-item.open .review-body { max-height: 1200px; }
+.review-body { height:0; overflow:hidden; transition:height 0.35s ease; }
+/* review-body height controlled by JS */
 .review-content {
   padding: 14px 15px 16px;
   border-top: 1px solid var(--border-soft);
@@ -1211,13 +1211,13 @@ body {
   </div>
 
   
-  <div style="font-family:'Noto Serif KR',serif;font-size:13px;font-weight:600;color:var(--dark);padding:16px 0 8px;border-top:1px solid var(--border-soft);margin-top:4px;">🔬 왜 엑소좀을 동결건조하지 않는가</div>
+  <div style="font-family:'Noto Serif KR',serif;font-size:13px;font-weight:600;color:var(--dark);padding:16px 0 8px;border-top:1px solid var(--border-soft);margin-top:4px;">🔬 왜 세포외소포(EV)를 동결건조하지 않는가</div>
 <div class="accordion" onclick="toggleAcc(this)">
     <div class="acc-header">
       <div class="acc-left">
         <div class="acc-icon red-bg">⚠️</div>
         <div class="acc-text">
-          <div class="acc-title">업계의 문제 — 엑소좀 동결건조의 과학적 한계</div>
+          <div class="acc-title">업계의 문제 — EV(세포외소포) 동결건조의 과학적 한계</div>
           <div class="acc-desc">아직 해결되지 않은 이중지질막 파괴 문제</div>
         </div>
       </div>
@@ -1753,7 +1753,7 @@ body {
           <tr><td>과도한 피지·산화</td><td>pH 교란 → 칼슘 이온화 방해</td><td>모낭 염증·탈모 위험</td></tr>
         </table>
         <div class="info-box">
-          <strong>화장품 범주 내 표현:</strong> 두피 칼슘 그레디언트 지원은 "두피 컨디션 케어" · "두피 장벽 환경 지원"으로 표현됩니다. 탈모 치료·모발 재생 등 의약품적 표현은 사용하지 않습니다.
+          <strong>화장품 범주 내 표현:</strong> 두피 칼슘 그레디언트 지원은 "두피 컨디션 케어" · "두피 장벽 환경 지원"으로 표현됩니다. 탈모 개선·모발 케어 등 의약품적 효능·효과 표현은 사용하지 않습니다.
         </div>
       </div>
     </div>
@@ -2014,7 +2014,7 @@ body {
 
 정식으로 도입하면 단가가 있는 <strong>프리미엄 회차</strong>로 운영하기에 충분히 차별점이 있는 매뉴얼이라고 느꼈어요.</div>
         <div class="review-tag-row">
-          <span class="review-tag">리퀴드마스크 1병 2단계</span>
+          <span class="review-tag">리퀴드마스크 필링 1병 2단계</span>
           <span class="review-tag">필링 → 메인관리</span>
           <span class="review-tag">프리미엄 회차 구성</span>
         </div>
@@ -2274,8 +2274,6 @@ body {
 
 </div>
 
-</div>
-
 <!-- FOOTER -->
 <div class="footer">
   <div class="footer-logo">DR. BAE</div>
@@ -2289,38 +2287,81 @@ body {
 </div>
 
 <script>
-function toggleAcc(el){
-  if(event && !event.target.closest('.acc-header')) return;
-  const parent = el.closest('.section');
-  const isOpen = el.classList.contains('open');
-  if(parent){
-    parent.querySelectorAll('.accordion.open').forEach(a=>{ if(a!==el) a.classList.remove('open'); });
-  }
-  el.classList.toggle('open', !isOpen);
+// ── 아코디언 높이 애니메이션 (실제 높이 계산 방식) ──
+function slideOpen(body) {
+  body.style.height = '0px';
+  body.style.display = 'block';
+  const target = body.scrollHeight;
+  body.style.height = target + 'px';
+  body.addEventListener('transitionend', function handler() {
+    body.style.height = 'auto';
+    body.removeEventListener('transitionend', handler);
+  }, { once: true });
 }
-function toggleFaq(el){
-  if(event && !event.target.closest('.faq-q')) return;
-  const isOpen = el.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(f=>{ if(f!==el) f.classList.remove('open'); });
-  el.classList.toggle('open', !isOpen);
-}
-function toggleReview(el){
-  if(event && !event.target.closest('.review-header')) return;
-  const isOpen = el.classList.contains('open');
-  document.querySelectorAll('.review-item.open').forEach(r=>{ if(r!==el) r.classList.remove('open'); });
-  el.classList.toggle('open', !isOpen);
-}
-window.addEventListener('DOMContentLoaded',()=>{
-  // 펼쳐진 내용 영역 클릭 시 이벤트 전파 차단
-  document.querySelectorAll('.acc-body, .review-body, .faq-a').forEach(function(el){
-    el.addEventListener('click', function(e){ e.stopPropagation(); });
-  });
-  setTimeout(()=>{
-    document.querySelectorAll('.gradient-bar').forEach(b=>{
-      const w=b.style.width; b.style.width='0%';
-      setTimeout(()=>{ b.style.width=w; },200);
+function slideClose(body) {
+  body.style.height = body.scrollHeight + 'px';
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      body.style.height = '0px';
     });
-  },400);
+  });
+}
+function closeAccordion(el) {
+  el.classList.remove('open');
+  const body = el.querySelector('.acc-body, .review-body, .faq-a');
+  if (body) slideClose(body);
+}
+function openAccordion(el) {
+  el.classList.add('open');
+  const body = el.querySelector('.acc-body, .review-body, .faq-a');
+  if (body) slideOpen(body);
+}
+
+function toggleAcc(el) {
+  if (event && !event.target.closest('.acc-header')) return;
+  event.preventDefault();
+  const isOpen = el.classList.contains('open');
+  // 같은 섹션 내 다른 아코디언 닫기
+  const parent = el.closest('.section');
+  if (parent) {
+    parent.querySelectorAll('.accordion.open').forEach(a => {
+      if (a !== el) closeAccordion(a);
+    });
+  }
+  isOpen ? closeAccordion(el) : openAccordion(el);
+}
+function toggleFaq(el) {
+  if (event && !event.target.closest('.faq-q')) return;
+  event.preventDefault();
+  const isOpen = el.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(f => {
+    if (f !== el) closeAccordion(f);
+  });
+  isOpen ? closeAccordion(el) : openAccordion(el);
+}
+function toggleReview(el) {
+  if (event && !event.target.closest('.review-header')) return;
+  event.preventDefault();
+  const isOpen = el.classList.contains('open');
+  document.querySelectorAll('.review-item.open').forEach(r => {
+    if (r !== el) closeAccordion(r);
+  });
+  isOpen ? closeAccordion(el) : openAccordion(el);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  // 내용 영역 클릭 전파 차단
+  document.querySelectorAll('.acc-body, .review-body, .faq-a').forEach(el => {
+    el.addEventListener('click', e => e.stopPropagation());
+  });
+  // gradient bar 애니메이션
+  setTimeout(() => {
+    document.querySelectorAll('.gradient-bar').forEach(b => {
+      const w = b.style.width;
+      b.style.width = '0%';
+      setTimeout(() => { b.style.width = w; }, 200);
+    });
+  }, 400);
 });
 </script>
 </body>
