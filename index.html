@@ -869,7 +869,64 @@ body {
     </div>
   </div>
 
+  
+  <div style="font-family:'Noto Serif KR',serif;font-size:13px;font-weight:600;color:var(--dark);padding:16px 0 8px;border-top:1px solid var(--border-soft);margin-top:4px;">📐 칼슘 그레디언트의 원리</div>
+<div class="accordion" onclick="toggleAcc(this)">
+    <div class="acc-header">
+      <div class="acc-left">
+        <div class="acc-icon blue-bg">📊</div>
+        <div class="acc-text">
+          <div class="acc-title">표피 층별 칼슘 농도 분포</div>
+          <div class="acc-desc">역U자형 구배의 생리적 의미</div>
+        </div>
+      </div>
+      <div class="acc-arrow">▾</div>
+    </div>
+    <div class="acc-body">
+      <div class="acc-content">
+        <div class="gradient-diagram">
+          <div class="gradient-title-bar">표피 Ca²⁺ 농도 구배 (Epidermal Calcium Gradient)</div>
+          <div class="gradient-body">
+            <div class="gradient-row"><div class="gradient-layer">각질층 SC</div><div class="gradient-bar-wrap"><div class="gradient-bar" style="width:15%"></div></div><div class="gradient-pct">낮음 ↓</div></div>
+            <div class="gradient-row highlight-row"><div class="gradient-layer">과립층 SG</div><div class="gradient-bar-wrap"><div class="gradient-bar" style="width:95%"></div></div><div class="gradient-pct">최고 ↑↑</div></div>
+            <div class="gradient-row"><div class="gradient-layer">유극층 SS</div><div class="gradient-bar-wrap"><div class="gradient-bar" style="width:55%"></div></div><div class="gradient-pct">중간</div></div>
+            <div class="gradient-row"><div class="gradient-layer">기저층 SB</div><div class="gradient-bar-wrap"><div class="gradient-bar" style="width:20%"></div></div><div class="gradient-pct">낮음 ↓</div></div>
+            <div class="gradient-row"><div class="gradient-layer">진피</div><div class="gradient-bar-wrap"><div class="gradient-bar" style="width:25%"></div></div><div class="gradient-pct">기준선</div></div>
+            <div class="gradient-note">★ 과립층의 높은 Ca²⁺ 농도가 표피 분화 완성 신호이자 라멜라 소체 분비 트리거</div>
+          </div>
+        </div>
+        <p class="prose">칼슘 그레디언트는 각질형성세포 분화, 라멜라 소체 분비, Tight junction 형성을 조절하는 <strong>표피 항상성의 마스터 신호</strong>입니다.</p>
+      </div>
+    </div>
+  </div>
+
   <div class="accordion" onclick="toggleAcc(this)">
+    <div class="acc-header">
+      <div class="acc-left">
+        <div class="acc-icon blue-bg">🧪</div>
+        <div class="acc-text">
+          <div class="acc-title">그레디언트 붕괴와 피부 문제</div>
+          <div class="acc-desc">장벽 손상·아토피·건조와의 연관성</div>
+        </div>
+      </div>
+      <div class="acc-arrow">▾</div>
+    </div>
+    <div class="acc-body">
+      <div class="acc-content">
+        <table class="mix-table">
+          <tr><th>원인</th><th>Ca²⁺ 영향</th><th>결과</th></tr>
+          <tr><td>과도한 세정·스크럽</td><td>이온 환경 교란</td><td>장벽 구조 약화</td></tr>
+          <tr><td>아토피 피부염</td><td>그레디언트 소실</td><td>TSLP↑ → 가려움</td></tr>
+          <tr><td>레이저·박피 시술 후</td><td>표피 파괴 → 구배 손실</td><td>분화 재개 지연</td></tr>
+          <tr><td>노화·건조 피부</td><td>Ca²⁺ 항상성 저하</td><td>세라마이드 합성↓</td></tr>
+        </table>
+        <div class="info-box">
+          <strong>화장품 표현 범주:</strong> 칼리 파우더는 표피 내 Ca²⁺ 환경을 외부에서 지원하는 컨셉으로 "피부장벽 강화 지원" · "피부 컨디션 케어"로 표현됩니다. 진피 수준의 마스트셀 안정화는 화장품 범주를 벗어납니다.
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="accordion" onclick="toggleAcc(this)">
     <div class="acc-header">
       <div class="acc-left">
         <div class="acc-icon blue-bg">🔬</div>
@@ -1153,43 +1210,9 @@ body {
     </div>
   </div>
 
-  <div class="accordion" onclick="toggleAcc(this)">
-    <div class="acc-header">
-      <div class="acc-left">
-        <div class="acc-icon red-bg">⚠️</div>
-        <div class="acc-text">
-          <div class="acc-title">혼합 불가 제품 안내</div>
-          <div class="acc-desc">에센스겔 혼합 금지 — 반드시 확인</div>
-        </div>
-      </div>
-      <div class="acc-arrow">▾</div>
-    </div>
-    <div class="acc-body">
-      <div class="acc-content">
-        <div class="no-mix-banner">
-          <div class="no-mix-icon">🚫</div>
-          <div class="no-mix-text">
-            <strong>엑소토카인 에센스겔과의 혼합은 금지합니다.</strong><br>
-            칼슘판토테네이트에서 유리된 <strong>Ca²⁺(2가 양이온)</strong>이 에센스겔의 카보머(Carbomer) 음이온 망상 구조를 붕괴시켜 제형 점도가 급격히 저하됩니다.
-          </div>
-        </div>
-        <div class="highlight-box">
-          <strong>과학적 근거:</strong> 카보머는 중화 시 음이온 망상 구조를 형성합니다. Ca²⁺ 같은 다가 양이온은 이 구조를 가교·붕괴시켜 급격한 점도 저하를 유발하며, 이는 되돌릴 수 없는 제형 변성입니다.
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- SECTION 02: 왜 엑소좀을 동결건조하지 않는가 -->
-<div class="section">
-  <div class="section-header">
-    <div class="section-num">02</div>
-    <div class="section-title">왜 엑소좀을 동결건조하지 않는가<small>Science-First Formulation Strategy</small></div>
-  </div>
-
-  <div class="accordion" onclick="toggleAcc(this)">
+  
+  <div style="font-family:'Noto Serif KR',serif;font-size:13px;font-weight:600;color:var(--dark);padding:16px 0 8px;border-top:1px solid var(--border-soft);margin-top:4px;">🔬 왜 엑소좀을 동결건조하지 않는가</div>
+<div class="accordion" onclick="toggleAcc(this)">
     <div class="acc-header">
       <div class="acc-left">
         <div class="acc-icon red-bg">⚠️</div>
@@ -1307,76 +1330,39 @@ body {
       </div>
     </div>
   </div>
-</div>
-
-<!-- SECTION 03 -->
-<div class="section">
-  <div class="section-header">
-    <div class="section-num">03</div>
-    <div class="section-title">칼슘 그레디언트의 원리<small>Epidermal Calcium Gradient</small></div>
-  </div>
-
-  <div class="accordion" onclick="toggleAcc(this)">
+<div class="accordion" onclick="toggleAcc(this)">
     <div class="acc-header">
       <div class="acc-left">
-        <div class="acc-icon blue-bg">📊</div>
+        <div class="acc-icon red-bg">⚠️</div>
         <div class="acc-text">
-          <div class="acc-title">표피 층별 칼슘 농도 분포</div>
-          <div class="acc-desc">역U자형 구배의 생리적 의미</div>
+          <div class="acc-title">혼합 불가 제품 안내</div>
+          <div class="acc-desc">에센스겔 혼합 금지 — 반드시 확인</div>
         </div>
       </div>
       <div class="acc-arrow">▾</div>
     </div>
     <div class="acc-body">
       <div class="acc-content">
-        <div class="gradient-diagram">
-          <div class="gradient-title-bar">표피 Ca²⁺ 농도 구배 (Epidermal Calcium Gradient)</div>
-          <div class="gradient-body">
-            <div class="gradient-row"><div class="gradient-layer">각질층 SC</div><div class="gradient-bar-wrap"><div class="gradient-bar" style="width:15%"></div></div><div class="gradient-pct">낮음 ↓</div></div>
-            <div class="gradient-row highlight-row"><div class="gradient-layer">과립층 SG</div><div class="gradient-bar-wrap"><div class="gradient-bar" style="width:95%"></div></div><div class="gradient-pct">최고 ↑↑</div></div>
-            <div class="gradient-row"><div class="gradient-layer">유극층 SS</div><div class="gradient-bar-wrap"><div class="gradient-bar" style="width:55%"></div></div><div class="gradient-pct">중간</div></div>
-            <div class="gradient-row"><div class="gradient-layer">기저층 SB</div><div class="gradient-bar-wrap"><div class="gradient-bar" style="width:20%"></div></div><div class="gradient-pct">낮음 ↓</div></div>
-            <div class="gradient-row"><div class="gradient-layer">진피</div><div class="gradient-bar-wrap"><div class="gradient-bar" style="width:25%"></div></div><div class="gradient-pct">기준선</div></div>
-            <div class="gradient-note">★ 과립층의 높은 Ca²⁺ 농도가 표피 분화 완성 신호이자 라멜라 소체 분비 트리거</div>
+        <div class="no-mix-banner">
+          <div class="no-mix-icon">🚫</div>
+          <div class="no-mix-text">
+            <strong>엑소토카인 에센스겔과의 혼합은 금지합니다.</strong><br>
+            칼슘판토테네이트에서 유리된 <strong>Ca²⁺(2가 양이온)</strong>이 에센스겔의 카보머(Carbomer) 음이온 망상 구조를 붕괴시켜 제형 점도가 급격히 저하됩니다.
           </div>
         </div>
-        <p class="prose">칼슘 그레디언트는 각질형성세포 분화, 라멜라 소체 분비, Tight junction 형성을 조절하는 <strong>표피 항상성의 마스터 신호</strong>입니다.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="accordion" onclick="toggleAcc(this)">
-    <div class="acc-header">
-      <div class="acc-left">
-        <div class="acc-icon blue-bg">🧪</div>
-        <div class="acc-text">
-          <div class="acc-title">그레디언트 붕괴와 피부 문제</div>
-          <div class="acc-desc">장벽 손상·아토피·건조와의 연관성</div>
-        </div>
-      </div>
-      <div class="acc-arrow">▾</div>
-    </div>
-    <div class="acc-body">
-      <div class="acc-content">
-        <table class="mix-table">
-          <tr><th>원인</th><th>Ca²⁺ 영향</th><th>결과</th></tr>
-          <tr><td>과도한 세정·스크럽</td><td>이온 환경 교란</td><td>장벽 구조 약화</td></tr>
-          <tr><td>아토피 피부염</td><td>그레디언트 소실</td><td>TSLP↑ → 가려움</td></tr>
-          <tr><td>레이저·박피 시술 후</td><td>표피 파괴 → 구배 손실</td><td>분화 재개 지연</td></tr>
-          <tr><td>노화·건조 피부</td><td>Ca²⁺ 항상성 저하</td><td>세라마이드 합성↓</td></tr>
-        </table>
-        <div class="info-box">
-          <strong>화장품 표현 범주:</strong> 칼리 파우더는 표피 내 Ca²⁺ 환경을 외부에서 지원하는 컨셉으로 "피부장벽 강화 지원" · "피부 컨디션 케어"로 표현됩니다. 진피 수준의 마스트셀 안정화는 화장품 범주를 벗어납니다.
+        <div class="highlight-box">
+          <strong>과학적 근거:</strong> 카보머는 중화 시 음이온 망상 구조를 형성합니다. Ca²⁺ 같은 다가 양이온은 이 구조를 가교·붕괴시켜 급격한 점도 저하를 유발하며, 이는 되돌릴 수 없는 제형 변성입니다.
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- SECTION 04 -->
+
+<!-- SECTION 02 -->
 <div class="section">
   <div class="section-header">
-    <div class="section-num">04</div>
+    <div class="section-num">02</div>
     <div class="section-title">호환 제품 믹스 활용법<small>Compatible Mix Strategy</small></div>
   </div>
 
@@ -1434,10 +1420,10 @@ body {
   </div>
 </div>
 
-<!-- SECTION 05 -->
+<!-- SECTION 03 -->
 <div class="section">
   <div class="section-header">
-    <div class="section-num">05</div>
+    <div class="section-num">03</div>
     <div class="section-title">피부관리 프로그램 예시<small>Treatment Protocol</small></div>
   </div>
 
@@ -1609,10 +1595,10 @@ body {
   </div>
 </div>
 
-<!-- SECTION 06 -->
+<!-- SECTION 04 -->
 <div class="section">
   <div class="section-header">
-    <div class="section-num">06</div>
+    <div class="section-num">04</div>
     <div class="section-title">문제성 피부 적용 가이드<small>Application by Skin Concern</small></div>
   </div>
   <div class="accordion" onclick="toggleAcc(this)">
@@ -1651,10 +1637,10 @@ body {
   </div>
 </div>
 
-<!-- SECTION 07 -->
+<!-- SECTION 05 -->
 <div class="section">
   <div class="section-header">
-    <div class="section-num">07</div>
+    <div class="section-num">05</div>
     <div class="section-title">자주 묻는 질문<small>FAQ</small></div>
   </div>
   <div class="faq-item" onclick="toggleFaq(this)">
@@ -1689,10 +1675,10 @@ body {
 </div>
 
 
-<!-- SECTION 08: 두피 케어와 칼슘 그레디언트 -->
+<!-- SECTION 06: 두피 케어와 칼슘 그레디언트 -->
 <div class="section">
   <div class="section-header">
-    <div class="section-num">08</div>
+    <div class="section-num">06</div>
     <div class="section-title">두피 케어와 칼슘 그레디언트<small>Scalp Care &amp; Calcium Gradient</small></div>
   </div>
 
@@ -1890,10 +1876,10 @@ body {
   </div>
 </div>
 
-<!-- SECTION 09: 원장님 후기 -->
+<!-- SECTION 07: 원장님 후기 -->
 <div class="section">
   <div class="section-header">
-    <div class="section-num">09</div>
+    <div class="section-num">07</div>
     <div class="section-title">출시 전 참여 원장님 후기<small>Pre-launch Director Reviews</small></div>
   </div>
 
@@ -2304,6 +2290,7 @@ body {
 
 <script>
 function toggleAcc(el){
+  if(event && !event.target.closest('.acc-header')) return;
   const parent = el.closest('.section');
   const isOpen = el.classList.contains('open');
   if(parent){
@@ -2312,16 +2299,22 @@ function toggleAcc(el){
   el.classList.toggle('open', !isOpen);
 }
 function toggleFaq(el){
+  if(event && !event.target.closest('.faq-q')) return;
   const isOpen = el.classList.contains('open');
   document.querySelectorAll('.faq-item.open').forEach(f=>{ if(f!==el) f.classList.remove('open'); });
   el.classList.toggle('open', !isOpen);
 }
 function toggleReview(el){
+  if(event && !event.target.closest('.review-header')) return;
   const isOpen = el.classList.contains('open');
   document.querySelectorAll('.review-item.open').forEach(r=>{ if(r!==el) r.classList.remove('open'); });
   el.classList.toggle('open', !isOpen);
 }
 window.addEventListener('DOMContentLoaded',()=>{
+  // 펼쳐진 내용 영역 클릭 시 이벤트 전파 차단
+  document.querySelectorAll('.acc-body, .review-body, .faq-a').forEach(function(el){
+    el.addEventListener('click', function(e){ e.stopPropagation(); });
+  });
   setTimeout(()=>{
     document.querySelectorAll('.gradient-bar').forEach(b=>{
       const w=b.style.width; b.style.width='0%';
